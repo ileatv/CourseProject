@@ -17,10 +17,11 @@ export const scss = () => {
             message: "Error: <%= error.message %>"
         })
     ))
-    .pipe(app.plugins.replace(/@img\//g, '../img/')) //Обработка алиасов(псевдонимов)    
+    // .pipe(app.plugins.replace(/@img\//g, '../img/')) //Обработка алиасов(псевдонимов)    
     .pipe(sass({
         outputStyle: 'expanded'
     }))
+    .pipe(app.plugins.replace(/@img\//g, '../img/')) //Обработка алиасов(псевдонимов)    
     .pipe(
         app.plugins.if(
             app.isBuild,
