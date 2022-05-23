@@ -34,7 +34,8 @@ body {
     min-height: 100vh;
     scroll-behavior: smooth;
     text-rendering: optimizeSpeed;
-    line-height: 1.5;
+    overflow-x: hidden;
+    font-family: Pragmatica;
 }
 
 /* Remove list styles on ul, ol elements with a class attribute */
@@ -65,6 +66,42 @@ button,
 textarea,
 select {
     font: inherit;
+}
+
+button{
+    cursor: pointer;
+}
+
+.primary-text{
+    font-size: $primary-text-size;
+}
+
+.btn{
+    display: flex;
+    width: 100%;
+    max-width: 114px;
+    height: 100%;
+    max-height: 33px;
+    padding: 8px 10px 9px 10px;
+    background-color: $btn-bg-color;
+    border-radius: 4px;
+    color: $btn-text-color;
+    font-size: 14px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+
+    &:hover{
+        border-radius: 4px;
+        box-shadow: 0 0 0 2px $btn-bg-color inset, 0 0 0 4px $btn-border-color inset;
+    }
+
+    &_m161px{
+        margin-right: auto;
+    }
+
+    img{
+        margin-right: 3px;
+    }
 }
 
 /* Remove all animations and transitions for people that prefer not to see them */

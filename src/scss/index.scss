@@ -1,8 +1,159 @@
-body{
-        background: url(@img/lilhomies.jpg) 0 0 no-repeat;
+.container{
+        width: 100%;
+        max-width: 1400px;
+        margin: 0 auto;
+        position: relative;
 }
-h1, span{
-        font-family: "Pragmatica";
-        background: #000;
-        color: red;
+
+//Стили для секции header
+header{
+        background-color: $header-bg-color;
+}
+
+.nav{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding-top: 16px;
+        margin-bottom: 49px;
+}
+
+.logo{
+        width: 100%;
+        max-width: 278px;
+        height: 100%;
+        max-height: 72px;
+        margin-right: 54px;
+}
+
+form{
+        position: relative;
+        display: flex;
+        margin-right: 62px;
+
+        input{
+                width: 100%;
+                min-width: 566px;
+                max-width: 566px;
+                height: 100%;
+                min-height: 33px;
+                max-height: 33px;
+                border: $border-color 2px solid;
+                border-radius: 5px;
+                background-color: $input-bg-color;
+                color: $input-text-color;
+                font-size: 14px;
+                padding-left: 10px;
+
+                &:focus{
+                        outline: 0;
+                        outline-offset: 0;
+                }
+        }
+
+        button{
+                position: absolute;
+                left: 505px;
+                top: 1.8px;
+                width: 100%;
+                max-width: 60px;
+                height: 100%;
+                min-height: 29px;
+                max-height: 29px;
+                border-radius: 3px;
+                background-color: $btn-bg-color;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: none;
+        }
+}
+
+.menu-auth{
+        display: flex;
+
+        li{
+                position: relative;
+                margin-right: 29px;
+
+                &:last-child{
+                        margin-right: 0;
+                }
+
+                a{
+                        position: relative;
+                        text-decoration: none;
+                        color: $auth-items-color;
+                        font-size: $auth-items-size;
+
+                        span{
+                                &::before{
+                                        position: absolute;
+                                        content: "";
+                                        border: 6px solid transparent; 
+                                        border-top: 9px solid $auth-items-color;
+                                        top: 3.5px;
+                                        left: -14px;
+                                }
+                        }
+                }
+        }
+}
+
+.nav-menu{
+        padding-bottom: 37px;
+        
+        &__list{
+                display: flex;
+                align-items: center;
+
+                li{
+                        position: relative;
+                        margin-right: 63px;
+        
+                        &:nth-child(4){
+                                margin-right: auto;
+                        }
+        
+                        &:last-child{
+                                margin-right: 20px;
+                        }
+                }
+        
+                a{
+                        position: relative;
+                        text-decoration: none;
+                        text-transform: uppercase;
+                        color: $nav-menu-items-color;
+                        font-size: $nav-menu-items-size;
+
+                        &:hover::after {
+                                width: 100%;
+                                right: 0;
+                        }
+
+                        &::after {
+                                bottom: 0;
+                                content: "";
+                                display: block;
+                                height: 2px;
+                                left: 0;
+                                position: absolute;
+                                background: $underline-color;
+                                transition: width .5s ease 0s, right .5s ease 0s;
+                                width: 0;
+                        }
+
+                        span{
+                                &::before{
+                                        position: absolute;
+                                        content: "";
+                                        border: 6px solid transparent; 
+                                        border-top: 10px solid $nav-menu-items-color;
+                                        top: 5px;
+                                        right: -14px;
+                                }
+                        }
+                }
+        }        
 }
