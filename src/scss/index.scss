@@ -8,6 +8,7 @@
 //Стили для секции header
 header{
         background-color: $header-bg-color;
+        margin-bottom: 46px;
 }
 
 .nav{
@@ -26,46 +27,48 @@ header{
         margin-right: 54px;
 }
 
-form{
-        position: relative;
-        display: flex;
-        margin-right: 62px;
-
-        input{
-                width: 100%;
-                min-width: 566px;
-                max-width: 566px;
-                height: 100%;
-                min-height: 33px;
-                max-height: 33px;
-                border: $border-color 2px solid;
-                border-radius: 5px;
-                background-color: $input-bg-color;
-                color: $input-text-color;
-                font-size: 14px;
-                padding-left: 10px;
-
-                &:focus{
-                        outline: 0;
-                        outline-offset: 0;
-                }
-        }
-
-        button{
-                position: absolute;
-                left: 505px;
-                top: 1.8px;
-                width: 100%;
-                max-width: 60px;
-                height: 100%;
-                min-height: 29px;
-                max-height: 29px;
-                border-radius: 3px;
-                background-color: $btn-bg-color;
+.nav-search{
+        form{
+                position: relative;
                 display: flex;
-                align-items: center;
-                justify-content: center;
-                border: none;
+                margin-right: 62px;
+        
+                input{
+                        width: 100%;
+                        min-width: 566px;
+                        max-width: 566px;
+                        height: 100%;
+                        min-height: 33px;
+                        max-height: 33px;
+                        border: $border-color 2px solid;
+                        border-radius: 5px;
+                        background-color: $input-bg-color;
+                        color: $input-text-color;
+                        font-size: 14px;
+                        padding-left: 10px;
+        
+                        &:focus{
+                                outline: 0;
+                                outline-offset: 0;
+                        }
+                }
+        
+                button{
+                        position: absolute;
+                        left: 505px;
+                        top: 1.8px;
+                        width: 100%;
+                        max-width: 60px;
+                        height: 100%;
+                        min-height: 29px;
+                        max-height: 29px;
+                        border-radius: 3px;
+                        background-color: $btn-bg-color;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        border: none;
+                }
         }
 }
 
@@ -85,6 +88,7 @@ form{
                         text-decoration: none;
                         color: $auth-items-color;
                         font-size: $auth-items-size;
+                        font-weight: 400;
 
                         span{
                                 &::before{
@@ -157,3 +161,132 @@ form{
                 }
         }        
 }
+
+//Стили для секции sidebar
+aside{
+        margin-bottom: 46px;
+}
+
+.sidebar{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 234px;
+
+        &__btn{
+                width: 100%;
+                max-width: 232px;
+                height: 100%;
+                max-height: 34px;
+                text-decoration: none;
+                padding: 8px 74px 8px 74px;
+                text-align: center;
+                background-color: $sidebar-btn-bg-color;
+                color: $sidebar-btn-color;
+                border: $sidebar-btn-border-color 1px solid;
+                border-radius: 5px;
+                font-weight: 700;
+                transition: all 0.5s ease;
+
+                &:hover{
+                        border: $btn-bg-color 1px solid;
+                        border-radius: 5px;
+                        background-color: $btn-bg-color;
+                        color: $btn-text-color;
+                        box-shadow: 0 0 0 2px $btn-bg-color inset, 0 0 0 4px $btn-border-color inset;
+                }
+
+                &_mb12px{
+                        margin-bottom: 12px;
+                }
+        }
+
+        &__search{
+                margin-bottom: 28px;
+
+                form{
+                        position: relative;
+                        display: flex;
+                
+                        input{
+                                width: 100%;
+                                min-width: 232px;
+                                max-width: 232px;
+                                height: 100%;
+                                min-height: 24px;
+                                max-height: 24px;
+                                border: none;
+                                border-radius: 5px;
+                                background-color: $input-bg-color;
+                                color: $input-text-color;
+                                font-size: 14px;
+                                padding-left: 5px;
+                
+                                &:focus{
+                                        outline: 0;
+                                        outline-offset: 0;
+                                }
+                        }
+                
+                        button{
+                                position: absolute;
+                                left: 208px;
+                                top: 1.8px;
+                                width: 100%;
+                                max-width: 20px;
+                                height: 100%;
+                                min-height: 21px;
+                                max-height: 21px;
+                                border-radius: 3px;
+                                background-color: transparent;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                border: none;
+
+                                img{
+                                        min-width: 20px;
+                                        max-width: 20px;
+                                        min-height: 21px;
+                                        max-height: 21px;
+                                }
+                        }
+                }
+        }
+
+        &__studNteach{
+                width: 100%;
+                max-width: 232px;
+                height: 100%;
+                max-height: 34px;
+                text-decoration: none;
+                padding: 8px 14px 8px 14px;
+                border-radius: 5px;
+                background-color: $sidebar-studNteach-bg-color;
+                font-size: $side-text-size;
+                color: $sidebar-studNteach-color;
+                font-weight: 400;
+                transition: all 0.3s ease;
+
+                &:hover{
+                        border-radius: 5px;
+                        box-shadow: 0 0 0 2px $btn-bg-color inset, 0 0 0 4px $btn-border-color inset;
+                }
+
+                &_mb6px{
+                        margin-bottom: 6px;
+                }
+        }
+
+        &__news{
+                width: 100%;
+                min-width: 232px;
+                max-width: 232px;
+                height: 100%;
+                min-height: 638px;
+                max-height: 638px;
+                background-color: $light-black;
+                border-radius: 5px;
+        }
+}
+
