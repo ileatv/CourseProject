@@ -55,13 +55,13 @@ header{
         
                 button{
                         position: absolute;
-                        left: 505px;
-                        top: 1.8px;
+                        left: 504px;
+                        top: 1.5px;
                         width: 100%;
                         max-width: 60px;
                         height: 100%;
-                        min-height: 29px;
-                        max-height: 29px;
+                        min-height: 30px;
+                        max-height: 30px;
                         border-radius: 3px;
                         background-color: $btn-bg-color;
                         display: flex;
@@ -155,7 +155,7 @@ header{
                                         border: 6px solid transparent; 
                                         border-top: 10px solid $nav-menu-items-color;
                                         top: 5px;
-                                        right: -14px;
+                                        right: -15px;
                                 }
                         }
                 }
@@ -165,6 +165,9 @@ header{
 //Стили для секции sidebar
 aside{
         margin-bottom: 46px;
+        margin-right: 16px;
+        width: 100%;
+        max-width: 234px;
 }
 
 .sidebar{
