@@ -162,6 +162,12 @@ header{
         }        
 }
 
+.content-group{
+        display: flex;
+        position: relative;
+        width: 100%;
+}
+
 //Стили для секции sidebar
 aside{
         margin-bottom: 46px;
@@ -293,3 +299,217 @@ aside{
         }
 }
 
+//Стили для секции footer
+footer{
+        background-color: $footer-bg-color;
+        padding-top: 30px;
+}
+
+.foo-content{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        font-size: $footer-text-size;
+
+        &__menu{
+                margin-bottom: 16px;
+        }
+
+        &__list{
+                display: flex;
+
+                li{
+                        position: relative;
+                        margin-right: 40px;
+
+                        &:nth-child(6){
+                                margin-right: auto;
+                        }
+                        
+                        &:last-child{
+                                margin-right: 0;
+                        }
+                }
+
+                a{
+                        position: relative;
+                        text-decoration: none;
+                        color: $footer-list-item-color;
+                        font-weight: 400;
+
+                        &:hover::after {
+                                width: 100%;
+                                right: 0;
+                        }
+        
+                        &::after {
+                                bottom: 0;
+                                content: "";
+                                display: block;
+                                height: 1px;
+                                left: 0;
+                                position: absolute;
+                                background: $footer-items-underline-color;
+                                transition: width .5s ease 0s, right .5s ease 0s;
+                                width: 0;
+                        }
+                }
+                
+        }
+}
+
+.social-bar{
+        display: flex;
+
+        li{
+                margin-right: 10px;
+                background-color: $dark-gray;
+                border-radius: 5px;
+                border: $dark-gray 2px solid;
+                transition: all 0.5s ease;
+
+                &:hover{
+                        border-radius: 5px;
+                        border: $btn-bg-color 2px solid;
+                }
+
+                &:first-child{
+                        margin-left: auto;
+                }
+
+                &:last-child{
+                        margin-right: 0;
+                }
+        }
+
+        a{
+                width: 100%;
+                max-width: 37px;
+                height: 100%;
+                max-height: 27px;
+                text-decoration: none;
+        }
+
+        img{
+                width: 100%;
+                max-width: 37px;
+                height: 100%;
+                max-height: 27px;
+        }
+}
+
+.wrapper{
+        margin-bottom: 10px;
+}
+
+.group-info{
+        display: flex;
+        margin-bottom: 100px;
+}
+
+.feedback{
+        margin-right: auto;
+
+        &__list{
+                display: flex;
+                flex-direction: column;
+
+                li{
+                        margin-bottom: 10px;
+                        font-size: $footer-text-size;
+                        color: $footer-list-item-color;
+
+                        &:nth-child(2){
+
+                                img{
+                                        max-width: 25px;
+                                        max-height: 25px;
+                                        margin-right: 5px;
+                                }
+                        }
+
+                        &:last-child{
+                                margin-bottom: 0;
+
+                                img{
+                                        margin-left: 5px;
+                                        max-width: 18px;
+                                        max-height: 18px;
+                                        margin-right: 7px;
+                                }        
+                        }
+                }
+
+                a{
+                        color: $footer-list-item-color;
+                        display: flex;
+                        align-items: center;
+                        text-decoration: none;
+                        font-weight: 400;
+                }
+        }
+}
+
+.more-info{
+        margin-top: 36px;
+
+        &__list{
+                display: flex;
+                flex-direction: column;
+                text-align: right;
+
+                li{
+                        margin-bottom: 10px;
+                        font-size: $footer-text-size;
+                        position: relative;
+                        
+                        &:last-child{
+                                margin-bottom: 0;
+                        }
+                }
+
+                a{
+                        color: $footer-list-item-color;
+                        text-decoration: none;
+                        position: relative;
+                        font-weight: 400;
+
+                        &:hover::after {
+                                width: 100%;
+                                right: 0;
+                        }
+        
+                        &::after {
+                                bottom: 0;
+                                content: "";
+                                display: block;
+                                height: 1px;
+                                left: 0;
+                                position: absolute;
+                                background: $footer-items-underline-color;
+                                transition: width .5s ease 0s, right .5s ease 0s;
+                                width: 0;
+                        }
+                }
+        }
+}
+
+.date-n-logo{
+        display: flex;
+        align-items: center;
+        padding-bottom: 56px;
+
+        span{
+                margin-right: auto;
+                font-size: $footer-text-size;
+                color: $footer-date-color;
+                font-weight: 400;
+        }
+
+        img{
+                width: 100%;
+                max-width: 88px;
+                height: 100%;
+                max-height: 24px;
+        }
+}
