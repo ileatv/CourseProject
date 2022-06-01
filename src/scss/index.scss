@@ -168,13 +168,13 @@ header{
 
 .content-group{
         display: flex;
+        align-items: flex-start;
         position: relative;
-        width: 100%;
+        margin-bottom: 46px;
 }
 
 //Стили для секции sidebar
 aside{
-        margin-bottom: 46px;
         margin-right: 16px;
         width: 100%;
         max-width: 234px;
@@ -301,6 +301,24 @@ aside{
                 background-color: $light-black;
                 border-radius: 5px;
         }
+}
+
+//Стили для секции courses
+.courses{
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        min-width: 1150px;
+        // max-width: 1150px;
+        height: 100%;
+        min-height: 770px;
+        // max-height: 770px;
+        background-color: transparent;
+        border: $courses-border-color 3px solid;
+        border-radius: 5px;
+        color: $courses-text-color;
+        font-size: $courses-text-size;
 }
 
 //Стили для секции footer
