@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    @@include('html/head.html', {
+        "title": "StudHub: Авторизация пользователя"
+    })
+</head>
+<body class="auth-body-bg">
+    <div class="auth-body-overlay"></div>
+        <section class="auth-form">
+            <div class="container">
+                <div class="auth-form__content">
+                    <div class="auth-form__left-part">
+                        <div class="auth-form__slogan">
+                            <a href="authorization.html" class="logo logo_mr0">
+                                <object data="@svgicons/logo.svg" type="image/svg+xml">
+                                    <img src="@img/logo.png" alt="logotype">
+                                </object>
+                            </a>
+                        </div>
+                        <h1>НA STUDHUB ЗНАЧИТЕЛЬНО БОЛЬШЕ, ЧЕМ ВЫ ДУМАЕТЕ!</h1>
+                        <ul class="auth-form__subtext">
+                            <li>
+                                <object data="@svgicons/school.svg" type="image/svg+xml">
+                                    <img src="@img/school.png" alt="knowledge">
+                                </object>
+                                <span>- Получайте знания</span>
+                            </li>
+                            <li>
+                                <object data="@svgicons/message.svg" type="image/svg+xml">
+                                    <img src="@img/message.png" alt="message">
+                                </object>
+                                <span>- Общайтесь</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="auth-form__right-part">
+                            <div class="login" id="log">
+                                <h2>Войдите в свою учётную запись</h2>
+                                <form  action="" autocomplete="on">                                    
+                                    <div class="login__field">
+                                        <div class="login__img login__img_log">
+                                            <object data="@svgicons/person-icon.svg" type="image/svg+xml">
+                                                <img src="@img/person-icon.png" alt="person-icon">
+                                            </object>
+                                        </div>
+                                        <input class="login__username" name="username" required="required" type="text" placeholder="Username"/>
+                                    </div>
+                                    <div class="login__field">
+                                        <div class="login__img login__img_pass">
+                                            <object data="@svgicons/padlock-icon.svg" type="image/svg+xml">
+                                                <img src="@img/padlock-icon.png" alt="person-icon">
+                                            </object>
+                                        </div>
+                                        <input id="login__password" name="password" required="required" type="password" placeholder="Password"/>
+                                    </div>
+                                    <div class="login__btn">
+                                        <input type="submit" value="Войти"/>
+                                    </div>
+                                    <div class="login__change-link">
+                                        <span>Ещё не зарегистрированы?</span>
+                                        <a onclick="hideLogShowSub();">Тогда зарегистрируй...</a>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="subscribe" id="sub">
+                                <h2>Пройдите бесплатную регистрацию</h2>
+                                <form  action="" autocomplete="on">
+                                    <div class="subscribe__field">
+                                        <input class="subscribe__login" name="usernamesignup" required="required" type="text" placeholder="Username" />
+                                    </div>
+                                    <div class="subscribe__field">
+                                        <input class="subscribe__email" name="emailsignup" required="required" type="text" placeholder="usermail@mail.ru"/>
+                                    </div>
+                                    <div class="subscribe__field">
+                                        <input class="subscribe__pass" name="passwordsignup" required="required" type="password" placeholder="Password"/>
+                                    </div>
+                                    <div class="subscribe__field">
+                                        <input class="subscribe__repeat-pass" name="passwordsignup_confirm" required="required" type="password" placeholder="Repeat the password"/>
+                                    </div>
+                                    <div class="subscribe__btn">
+                                        <input type="submit" value="Зарегистрироваться"/>
+                                    </div>
+                                    <div class="subscribe__change-link">
+                                        <span>Уже зарегистрированы?</span>
+                                        <a onclick="hideSubShowLog();">Тогда войдите...</a>
+                                    </div>
+                                </form>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <script>
+            function hideLogShowSub() { 
+                document.getElementById("log").style.display="none";
+                document.getElementById("log").style.overflow="hidden";
+                document.getElementById("sub").style.display="flex";
+                document.getElementById("sub").style.overflow="visible";
+            }
+
+            function hideSubShowLog(){
+                document.getElementById("sub").style.display="none";
+                document.getElementById("sub").style.overflow="hidden";
+                document.getElementById("log").style.display="flex";
+                document.getElementById("log").style.overflow="visible";
+            }
+        </script>
+</body>
+</html>

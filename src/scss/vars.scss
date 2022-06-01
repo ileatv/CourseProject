@@ -8,12 +8,16 @@ $white: #FFFFFF;
 
 //Element colors
 $header-bg-color: $light-black;
+$h1-color: $white;
 $body-bg-color: $black;
 $nav-menu-items-color: $white;
 $underline-color: $orange;
 $border-color: $light-gray;
-$input-bg-color: $dark-gray;
+$input-gray-bg-color: $dark-gray;
+$input-orange-bg-color: $orange;
+$input-bg-dark-color: $light-black;
 $input-text-color: $light-gray;
+$input-light-text-color: $white;
 $title-color: $orange;
 $auth-items-color: $light-gray;
 $btn-bg-color: $orange;
@@ -29,12 +33,19 @@ $footer-bg-color: $light-black;
 $footer-list-item-color: $light-gray;
 $footer-items-underline-color: $light-gray;
 $footer-date-color: $orange;
+$sign-color: $white;
+$auth-form-bg-color: $light-black;
+$auth-form-span-color: $white;
 
 //Elements size
+$h1-size: 62px;
+$sign-size: 16px;
 $nav-menu-items-size: 20px;
 $title-size: 16px;
 $primary-text-size: 16px;
 $side-text-size: 14px;
 $auth-items-size: 14px;
+$auth-form-span-size: 45px;
 $footer-text-size: 14px;
+$subscribe-input-size: 16px;
 
