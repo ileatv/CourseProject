@@ -1,3 +1,4 @@
+//Базовый контейнер
 .container{
         width: 100%;
         max-width: 1400px;
@@ -20,11 +21,17 @@ header{
 }
 
 .logo{
-        width: 100%;
-        max-width: 278px;
-        height: 100%;
-        max-height: 72px;
         margin-right: 54px;
+
+        object{
+                max-width: 278px;
+                max-height: 72px;
+
+                img{
+                        width: 100%;
+                        height: 100%;
+                }
+        }
 
         &_mr0{
                 margin-right: 0;
@@ -257,11 +264,16 @@ aside{
                                 justify-content: center;
                                 border: none;
 
-                                img{
+                                object{
                                         min-width: 20px;
                                         max-width: 20px;
                                         min-height: 21px;
                                         max-height: 21px;
+
+                                        img{
+                                                width: 100%; 
+                                                height: 100%;
+                                        }
                                 }
                         }
                 }
@@ -312,7 +324,7 @@ aside{
         min-width: 1150px;
         // max-width: 1150px;
         height: 100%;
-        min-height: 770px;
+        min-height: 774px;
         // max-height: 770px;
         background-color: transparent;
         border: $courses-border-color 3px solid;
@@ -405,18 +417,17 @@ footer{
         }
 
         a{
-                width: 100%;
-                max-width: 37px;
-                height: 100%;
-                max-height: 27px;
                 text-decoration: none;
-        }
 
-        img{
-                width: 100%;
-                max-width: 37px;
-                height: 100%;
-                max-height: 27px;
+                object{
+                        max-width: 37px;
+                        max-height: 27px;
+
+                        img{
+                                width: 100%;
+                                height: 100%;
+                        }
+                }
         }
 }
 
@@ -442,23 +453,32 @@ footer{
                         color: $footer-list-item-color;
 
                         &:nth-child(2){
-
-                                img{
+                                object{
                                         max-width: 25px;
                                         max-height: 25px;
                                         margin-right: 5px;
+
+                                        img{
+                                                width: 100%;
+                                                height: 100%;
+                                        } 
                                 }
                         }
 
                         &:last-child{
                                 margin-bottom: 0;
 
-                                img{
+                                object{
                                         margin-left: 5px;
                                         max-width: 18px;
                                         max-height: 18px;
                                         margin-right: 7px;
-                                }        
+
+                                        img{
+                                                width: 100%;
+                                                height: 100%;
+                                        }  
+                                }      
                         }
                 }
 
@@ -527,12 +547,14 @@ footer{
                 color: $footer-date-color;
                 font-weight: 400;
         }
-
-        img{
-                width: 100%;
+        object{
                 max-width: 88px;
-                height: 100%;
                 max-height: 24px;
+
+                img{
+                        width: 100%;
+                        height: 100%;
+                }
         }
 }
 
@@ -547,6 +569,7 @@ footer{
         height: 100%;
         position: relative;
         background-color: $body-bg-color;
+        min-height: 100vh;
 }
 
 .auth-body-overlay{
@@ -561,19 +584,21 @@ footer{
         opacity: 0.85;
 }
 
-.auth-form{
+.auth-forms{
         position: relative;
-        // padding-top: 270px;
-        padding-top: 5%;
         
         &__content{
                 position: relative;
                 display: flex;
                 align-items: center;
+                justify-content: center;
+                min-height: 100vh;
         }
 
         &__left-part{
                 position: relative;
+                display: flex;
+                flex-direction: column;
                 margin-right: auto;
                 
                 a{
@@ -607,13 +632,16 @@ footer{
                         &:first-child{
                                 margin-right: 46px;
                         }
-
-                        img{
-                                width: 100%;
+                        
+                        object{
                                 max-width: 30px;
-                                height: 100%;
                                 max-height: 30px;
-                                margin-right: 4px;
+
+                                img{
+                                        width: 100%;
+                                        height: 100%;
+                                        margin-right: 4px;
+                                }
                         }
                 }
         }
@@ -624,7 +652,6 @@ footer{
                 max-width: 560px;
                 height: 100%;
                 max-height: 560px;
-                min-height: 560px;
                 background-color: $auth-form-bg-color;
                 border: $border-color 3px solid;
                 border-radius: 10px;
@@ -637,7 +664,6 @@ footer{
 
 .subscribe, .login{
         width: 100%;
-        min-width: 404px;
         max-width: 404px;
         display: flex;
         flex-direction: column;
@@ -653,38 +679,14 @@ footer{
 
         form{
                 div{
-                        &:nth-child(5){
-                                input{
-                                        background-color: $input-orange-bg-color;
-                                        border: none;
-                                        border-radius: 4px;
-                                        font-weight: 700;
-                                        color: $light-black;
-                                        transition: all 0.3s ease;
-                                        padding: 0;
-                                        cursor: pointer;
-
-                                        &:hover{
-                                                background-color: $input-bg-dark-color;
-                                                box-shadow: 0 0 0 2px $btn-bg-color inset, 0 0 0 2px $btn-border-color inset;
-                                                color: $orange;
-                                        }
-                                }
-                        }
-
-                        &:nth-child(4){
-                                input{
-                                        margin-bottom: 26px;
-                                }
-                        }
+                        max-width: 404px;
+                        max-height: 44px;
+                        margin-bottom: 16px;
                 }
 
                 input{
                         width: 100%;
-                        max-width: 404px;
-                        height: 100%;
-                        min-height: 44px;
-                        max-height: 44px;
+                        height: 44px;
                         border: transparent solid 2px;
                         border-bottom: $border-color 2px solid;
                         margin-bottom: 16px;
@@ -692,6 +694,7 @@ footer{
                         color: $light-gray;
                         padding-left: 5px;
                         font-size: $subscribe-input-size;
+                        box-shadow: none;
 
                         &:focus{
                                 outline: 0;
@@ -739,40 +742,36 @@ footer{
 }
 
 .login{
+        padding-top: 98px;
+        padding-bottom: 98px;
+
         h2{
                 margin-bottom: 52px;
         }
 
         &__field{
                 position: relative;
-        }
 
-        &__img{
-                position: absolute;
-                content: "";                
-
-                &_log{
-                        top: -6px;
-                        left: -30px;
-                        max-width: 80px;
-                        max-height: 80px;
-                }
-
-                &_pass{
+                div{
+                        position: absolute;
+                        content: "";
+                        width: 26px;
+                        height: 26px;
                         top: 8px;
-                        left: -1px;
-                        max-width: 25px;
-                        max-height: 25px;
-                }
+                        left: 0;
 
-                img{
-                        width: 100%;
-                        height: 100%;
+                        object{
+                                img{
+                                        width: 100%;
+                                        height: 100%;
+                                }
+                        }   
                 }
         }
 
         form{
                 div{
+
                         &:nth-child(3){
                                 input{
                                         background-color: $input-orange-bg-color;
@@ -784,7 +783,6 @@ footer{
                                         padding: 0;
                                         cursor: pointer;
 
-
                                         &:hover{
                                                 background-color: $input-bg-dark-color;
                                                 box-shadow: 0 0 0 2px $btn-bg-color inset, 0 0 0 2px $btn-border-color inset;
@@ -794,8 +792,10 @@ footer{
                         }
 
                         &:nth-child(2){
+                                margin-bottom: 26px;
+
                                 input{
-                                        margin-bottom: 26px;
+                                        margin-bottom: 0;
                                 }
                         }
                 }
@@ -809,5 +809,40 @@ footer{
 .subscribe{
         display: none;
         overflow: hidden;
+        padding-top: 23.2px;
+        padding-bottom: 23.2px;
+
+        div{
+                &:first-child{
+                        margin-bottom: 0;
+                }
+
+                &:nth-child(6){
+                        input{
+                                background-color: $input-orange-bg-color;
+                                border-radius: 4px;
+                                border: none;
+                                font-weight: 700;
+                                color: $light-black;
+                                transition: all 0.3s ease;
+                                padding: 0;
+                                cursor: pointer;
+
+                                &:hover{
+                                        background-color: $input-bg-dark-color;
+                                        box-shadow: 0 0 0 2px $btn-bg-color inset, 0 0 0 2px $btn-border-color inset;
+                                        color: $orange;
+                                }
+                        }
+                }
+
+                &:nth-child(5){                        
+                        margin-bottom: 26px;
+
+                        input{
+                                margin-bottom: 0;
+                        }
+                }
+        }
 }
 

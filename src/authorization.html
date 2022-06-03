@@ -7,11 +7,11 @@
 </head>
 <body class="auth-body-bg">
     <div class="auth-body-overlay"></div>
-        <section class="auth-form">
+        <section class="auth-forms">
             <div class="container">
-                <div class="auth-form__content">
-                    <div class="auth-form__left-part">
-                        <div class="auth-form__slogan">
+                <div class="auth-forms__content">
+                    <div class="auth-forms__left-part">
+                        <div class="auth-forms__slogan">
                             <a href="authorization.html" class="logo logo_mr0">
                                 <object data="@svgicons/logo.svg" type="image/svg+xml">
                                     <img src="@img/logo.png" alt="logotype">
@@ -19,10 +19,10 @@
                             </a>
                         </div>
                         <h1>НA STUDHUB ЗНАЧИТЕЛЬНО БОЛЬШЕ, ЧЕМ ВЫ ДУМАЕТЕ!</h1>
-                        <ul class="auth-form__subtext">
+                        <ul class="auth-forms__subtext">
                             <li>
-                                <object data="@svgicons/school.svg" type="image/svg+xml">
-                                    <img src="@img/school.png" alt="knowledge">
+                                <object data="@svgicons/knowledge.svg" type="image/svg+xml">
+                                    <img src="@img/knowledge-icon.png" alt="knowledge">
                                 </object>
                                 <span>- Получайте знания</span>
                             </li>
@@ -34,7 +34,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="auth-form__right-part">
+                    <div class="auth-forms__right-part">
                             <div class="login" id="log">
                                 <h2>Войдите в свою учётную запись</h2>
                                 <form  action="" autocomplete="on">                                    
@@ -65,18 +65,19 @@
                             </div>
                             <div class="subscribe" id="sub">
                                 <h2>Пройдите бесплатную регистрацию</h2>
-                                <form  action="" autocomplete="on">
+                                <form  method="post" asp-controller="Account" asp-action="Register">
+                                    <div asp-validation-summary="ModelOnly"></div>
                                     <div class="subscribe__field">
-                                        <input class="subscribe__login" name="usernamesignup" required="required" type="text" placeholder="Username" />
+                                        <input asp-for="UserName" class="subscribe__login" name="usernamesignup" required="required" type="text" placeholder="Username" />
                                     </div>
                                     <div class="subscribe__field">
-                                        <input class="subscribe__email" name="emailsignup" required="required" type="text" placeholder="usermail@mail.ru"/>
+                                        <input asp-for="Email" class="subscribe__email" name="emailsignup" required="required" type="text" placeholder="usermail@mail.ru"/>
                                     </div>
                                     <div class="subscribe__field">
-                                        <input class="subscribe__pass" name="passwordsignup" required="required" type="password" placeholder="Password"/>
+                                        <input asp-for="Password" class="subscribe__pass" name="passwordsignup" required="required" type="password" placeholder="Password"/>
                                     </div>
                                     <div class="subscribe__field">
-                                        <input class="subscribe__repeat-pass" name="passwordsignup_confirm" required="required" type="password" placeholder="Repeat the password"/>
+                                        <input asp-for="PasswordConfirm" class="subscribe__repeat-pass" name="passwordsignup_confirm" required="required" type="password" placeholder="Repeat the password"/>
                                     </div>
                                     <div class="subscribe__btn">
                                         <input type="submit" value="Зарегистрироваться"/>
